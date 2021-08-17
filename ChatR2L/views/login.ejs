@@ -1,0 +1,44 @@
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+  integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+  crossorigin="anonymous"
+/>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3">
+          <i class="fas fa-sign-in-alt"></i> لاگ ان
+        </h1>
+        <% include ./partials/messages %>
+        <form action="/users/login" method="POST">
+          <div class="form-group">
+            <label for="username">یوزر کا نام</label>
+            <input
+              type="username"
+              id="name"
+              name="name"
+              class="form-control"
+              placeholder="نام لکھیں"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">پاس ورڈ</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              placeholder="پاس ورڈ درج کریں"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">لاگ ان</button>
+        </form>
+        <p class="lead mt-4">
+          اکاؤنٹ کھلا ہوا نہیں ہے؟ <a href="/users/register">رجسٹر</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
